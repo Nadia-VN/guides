@@ -14,7 +14,7 @@
 ### 2. Expected Output
 * Become familiar with Ruby syntax and semantics
 * Have basic understand of Ruby language (Control Flow, OOP features...)
-    * Can use Ruby to solve puzzles like Fibonnaci, Square Root... 
+    * Can use Ruby to solve puzzles like Fibonacci, Square Root... 
 * Be able to apply best coding style 
 
 ### 3. References
