@@ -123,4 +123,115 @@
 	 	$ git tag v1.4-lw
 		```
  
-2. ### Git style guide
+2. ### Recommended Git flow
+
+* Sẽ có 3 hoặc 4 branch chính trên remote repo tuỳ theo dự án
+	* __Master__ - Để deploy lên môi trường production
+	* __Staging__ - Để deploy lên môi trường staging
+	* (Optional) __Testing__ - Để deploy lên môi trường test hoặc build server
+	* __Develop__ - Branch chính dành cho develpment, mọi hoạt động development sẽ diễn ra trên branch này
+* __Workflow__
+	* __Phát triển 1 tính năng mới - 1 người làm duy nhất feature này__
+		* Tạo 1 branch mới
+		
+		```sh 
+		$ git checkout -b new_feature
+		```
+		* Sau khi đã hoàn thành việc phát triển => commit các thay đổi
+		
+		```sh
+		$ git commit -m 'Complete new feature'
+		```
+		* Pull những thay đổi mới nhất từ branch develop remote về local và rebase những thay đổi trên feature branch vào branch develop trên local
+
+		```sh
+		$ git checkout develop
+		$ git pull
+		$ git checkout new_feature
+		$ git rebase -i develop
+		```
+		* Sử dụng rebase -i để có thể lựa chọn các commit muốn giữ sử dụng pick và squash
+		
+		```sh
+		pick ae3a3dc Adding first part of new feature
+ 		squash 3c82ad8 Adding second part
+ 		```
+ 		* Merge branch feature này vào branch develop và (optional) delete branch feature
+
+ 		```sh
+ 		$ git checkout develop
+ 		$ get merge new_feature
+ 		$ git push origin develop
+ 		$ git branch -d new_feature
+ 		```
+ 	* __Phát triển tính năng mới, nhiều người cùng làm 1 tính năng__
+ 		* Tạo 1 branch feature chung có chức năng như base cho team làm feature này và push branch này lên remote
+
+ 		```sh 
+		$ git checkout -b new_feature/master
+		$ git push -u origin new_feature/master
+		```
+		* Mỗi người trong team sẽ tạo feature branch riêng của mình trên local từ branch new_feature/master và thực hiện công việc trên branch đó
+		
+		```sh
+		$ git checkout -b new_feature/member_name
+		```
+		* Sau khi hoàn thành phát triển thì tương tự như với trường hợp 1 người làm 1 feature branch nhưng thay vì rebase vào branch develop thì sẽ rebase vào branch new_feature/master.
+		
+		```sh
+		$ git checkout new_feature/master
+		$ git pull
+		$ git checkout new_feature/member_name
+		$ git rebase -i new_feature/master
+		$ git checkout new_feature/master
+ 		$ git merge new_feature/member_name
+		```
+		* Sau đó, team lead sẽ rebase branch feature này vào develop tương tự như flow 1 người
+		* Kết thúc có thể delete feature branch dưới local và trên remote.
+
+		```sh
+		$ git branch -d new_feature/member_name
+		$ git branch -d new_feature/master
+		$ git push origin --delete new_feature/master
+		```
+	* __Release__ sản phẩm
+		* Merge branch develop vào master (done by team leader)
+		
+		```sh
+		$ git checkout master
+		$ git merge develop
+		```
+		* Đánh dấu tag cho release 
+		
+		``` sh
+		$ git tag -a v1.0 -m 'First release
+		```
+		* Push tất cả lên remote repo
+		
+		```sh
+		$ git push
+		$ git push --tags
+		```
+	* __Hotfix__ Trong trường hợp tìm thấy lỗi đang chạy trên production.
+		* Tạo 1 branch hotfix trực tiếp từ master
+		
+		```sh
+		$ git checkout -b hotfix-{ issue-number }
+		```
+		* Sau khi fix xong merge lại vào master và push lên remote repo. Trong trường hợp lỗi lớn có thể đánh dấu tag
+		
+		```sh
+		$ git checkout master
+		$ git merge hotfix-{ issue-number }
+		$ git tag -a v1.0-patch1 -m 'Yo, fixed the bug'
+		$ git push
+		$ git push --tags
+		$ git branch -d hotfix-{ issue-number }
+		```
+		* Merge back những thay đổi từ master vào develop
+		
+		```sh
+		$ git checkout develop
+		$ git merge master
+		$ git push origin develop
+		```
