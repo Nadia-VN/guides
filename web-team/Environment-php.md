@@ -1,7 +1,18 @@
 # Environment for PHP developer
 ***
 
+## Các soft cần thiết cho việc phát triển php.
 
+1. GIT
+2. Apache, MySQL, PHP
+3. Terminal
+4. Composer
+5. Laravel (Framework's PHP)
+6. Editor (Sublime text 3)
+7. Virtual box & Vagrant
+8. FileZilla
+9. Sequel Pro
+    
 ### 1.  Install GIT
 
 - Download file "git-osx-installer" tại [trang chủ của git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git) và install.
@@ -10,10 +21,19 @@
 ### 2.  Setup environment for develop (Apache, MySQL, PHP)
 
 Để cài đặt Apache, MySQL, PHP trên MacOS thì cài MAMP và Homestead (Cài 1 trong 2 cái là đã ok!)
-#### 2.1. Cài đặt [MAMP](https://www.mamp.info/en/)
+#### 2.1. Cài đặt [MAMP](https://www.mamp.info/en/). Chú ý cài đặt version 3.2.1 
+
+##### Các component trong MAMP 3.2.1
+    
+    Apache 2.2.29
+    Nginx 1.7.10
+    MySQL 5.5.38
+    MySQL Utilities 1.3.6
+    PHP 5.1.6, 5.2.17, 5.3.29, 5.4.39, 5.5.23, 5.6.6
+    
 #### 2.2. Cài đặt Homestead
 
-- Note: Trước khi cài đặt homestead bạn phải cài đặt virtual box và vargrant.
+- Note: Trước khi cài đặt homestead bạn phải cài đặt virtual box và vargrant. (Xem tại mục 7)
 - Tham khảo tại [Homestead installed](http://laravel.com/docs/5.0/homestead)
 
 ### 3. Terminal
@@ -26,11 +46,11 @@
 
 ### 4. [Composer](https://getcomposer.org/download/).
 
-- Install Local
-`curl -sS https://getcomposer.org/installer | php`
-
-- Install Global
-`mv composer.phar /usr/local/bin/composer`
+    - Install Local
+    `curl -sS https://getcomposer.org/installer | php`
+    
+    - Install Global
+    `mv composer.phar /usr/local/bin/composer`
 
 Tham khảo thêm tại [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 
@@ -53,7 +73,7 @@ Tham khảo thêm tại [Composer](https://getcomposer.org/doc/00-intro.md#insta
 - Công ty sử dụng sublime text 3 để phát triển các dự án web
 
 - Link down [sublime text 3](http://www.sublimetext.com/3)
-- Ngoài ra bạn có thể cài thêm các plugin support cho sublime text. [Link](http://wasil.org/sublime-text-3-perfect-php-development-set-up).
+- Ngoài ra bạn có thể cài thêm các plugin support cho sublime text. [Plugin Sublime] (http://wasil.org/sublime-text-3-perfect-php-development-set-up).
   Ngoài ra cài đặt thêm: SublimeLinter-phpcs, AlignTab, CodeFormatter, DocBlockr, Emmet"
   
   
