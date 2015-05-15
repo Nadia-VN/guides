@@ -35,10 +35,10 @@
 
 ### 4. Android Studio Plugin (Nên có)
 ### 4.1 .ignore
-Sử dụng trong git ignore.
+- Sử dụng trong git ignore.
 
 ### 4.2 RestClient
-Sử dụng để test Rest API.
+- Sử dụng để test Rest API.
 
 ### 4.3 Android Drawable Importer
 - Sử dụng để convert các image sang các độ phân giải khác nhau.
