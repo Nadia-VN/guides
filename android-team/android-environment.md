@@ -17,13 +17,14 @@
 - Download tại địa chỉ sau : [Android Studio](https://developer.android.com/sdk/index.html).
 - Cài đặt Android Studio theo hướng dẫn sau : [Install Android Studio] (http://developer.android.com/sdk/installing/index.html?pkg=studio)
 - Update phiên bản thường xuyên và trên kênh ***stable*** (mặc định).
+
 **[⬆ back to top](#software)**
 
 ### 2. Genymotion
 - Được dùng thay cho máy ảo mặc định của Android Studio.
 - Download tại địa chỉ sau : [Genymotion] (https://www.genymotion.com/#!/) (Cần đăng kí một tài khoản miễn phí).
 - Sau khi cài đặt tải mỗi phiên bản android từ 15 đến cao nhất một máy ảo genymotion.
-- Có thể cài đặt playstore và google play service như trong hướng dẫn [tại đây](http://stackoverflow.com/questions/20121883/how-to-install-google-play-services-in-a-genymotion-vm-with-no-drag-and-drop-su)
+- Có thể cài đặt playstore và google play service trên genymotion như trong hướng dẫn [tại đây](http://stackoverflow.com/questions/20121883/how-to-install-google-play-services-in-a-genymotion-vm-with-no-drag-and-drop-su)
 
 **[⬆ back to top](#software)**
 
