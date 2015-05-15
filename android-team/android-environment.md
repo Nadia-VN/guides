@@ -6,10 +6,10 @@
 - [1. Android Studio] (#user-content-1-android-studio)
 - [2. Genymotion] (#user-content-2-genymotion)
 - [3. Git] (#user-content-3-git)
-- [4. Android Studio Plugin (Nên có)] (#user-content-4-android-studio-plugin-(nên-có))
-	- [4.1. .ignore] (#user-content-41-.ignore)
-	- [4.2. RestClient] (#user-content-42-restcClient)
-	- [4.3. Android Drawable Importer] (#user-content-43-android-drawable-impoter)
+- [4. Android Studio Plugin (Nên có)] (#user-content-4-android-studio-plugin-nên-có)
+	- [4.1. .ignore] (#user-content-41-ignore)
+	- [4.2. RestClient] (#user-content-42-restclient)
+	- [4.3. Android Drawable Importer] (#user-content-43-android-drawable-importer)
 	- [4.4. Dummy Text Generater] (#user-content-44-dummy-text-generater)
  
 ***
