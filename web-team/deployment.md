@@ -3,6 +3,8 @@
 ## 1. Thực thi trên môi trường Local
 * Khởi tạo dự án.
     * Clone project từ remote (git clone remote) 
+    * Kiểm tra xem có chức năng cronjob hay không.
+    * Kiểm tra xem có chức năng send email hay không(nếu có cần phải thay đổi email config)
 * Hoàn thiện chức năng 
 * Test trên local
 * Push các file mới hoặc đã thay đổi lên remote (git push)
@@ -48,6 +50,7 @@ Trong trường hợp server không cài đặt git chúng ta cần thực thi u
 * Config database
 * Config Base_url
 * Symlink domain tới folder project
+
 ### 3. Thao tao tác với database trên server
 * Đối với môi trường dev :
     - Có thể dump dữ liệu để test, thao tác với dữ liệu
